@@ -31,7 +31,7 @@ public class Order implements Serializable {
 	@JoinColumn(name = "client_id")
 	private User client;
 	
-	private Integer orderStatus;
+	private OrderStatus OrderStatus;
 
 
 
@@ -39,22 +39,19 @@ public class Order implements Serializable {
 
 	}
 	
-	public Order(Long id, Instant moment, OrderStatus orderStatus, User client ) {
-		super();
+	public Order(Long id, Instant moment, User client, OrderStatus orderStatus) {
 		this.id = id;
 		this.moment = moment;
-		setOrderStatus(orderStatus);
 		this.client = client;
+		OrderStatus = orderStatus;
 	}
 	
 	public OrderStatus getOrderStatus() {
-		return OrderStatus.valueOf(orderStatus);
+		return OrderStatus;
 	}
 
 	public void setOrderStatus(OrderStatus orderStatus) {
-		if(orderStatus != null) {
-			this.orderStatus = orderStatus.getCode();
-		}
+		OrderStatus = orderStatus;
 	}
 
 	public Long getId() {
