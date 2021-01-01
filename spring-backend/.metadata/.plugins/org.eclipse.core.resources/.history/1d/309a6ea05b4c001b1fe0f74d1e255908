@@ -1,0 +1,5 @@
+package com.server.entities.pk;
+
+public class OrderItemPk {
+
+}
