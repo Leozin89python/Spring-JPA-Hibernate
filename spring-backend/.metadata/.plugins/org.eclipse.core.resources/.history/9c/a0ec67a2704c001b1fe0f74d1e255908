@@ -41,7 +41,6 @@ public class OrderItem implements Serializable{
 		id.setOrder(order);
 	}
 	
-	@JsonIgnore
 	public Product getProduct() {
 		return id.getProduct();
 	}
@@ -89,5 +88,8 @@ public class OrderItem implements Serializable{
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
-	}  	 
+	}
+	
+	
+	 
 }

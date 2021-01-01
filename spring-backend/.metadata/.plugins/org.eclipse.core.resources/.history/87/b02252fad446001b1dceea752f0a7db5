@@ -1,5 +1,0 @@
-package com.server.entities.Enums;
-
-public enum OrderStatus {
-
-}
